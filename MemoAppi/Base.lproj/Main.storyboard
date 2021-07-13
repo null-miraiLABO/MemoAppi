@@ -21,7 +21,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="memo" id="Zvb-gY-8Ih">
-                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="xeV-mY-XHt"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="xeV-mY-XHt">
+                                            <connections>
+                                                <action selector="editButton:" destination="BYZ-38-t0r" id="1RN-TF-aye"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Make" id="L2U-4K-ozf">
                                             <connections>
                                                 <action selector="insrtNewButton:" destination="BYZ-38-t0r" id="6nH-Dt-oqx"/>
@@ -35,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lJc-bF-vtV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="lJc-bF-vtV">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lJc-bF-vtV" id="MfG-OT-gbC">
@@ -78,7 +82,11 @@
                                                 <segue destination="PqG-h4-3Ph" kind="unwind" unwindAction="returnDetailWithSegue:" id="cvM-Iz-Vas"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="y1a-Hn-B5b"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="y1a-Hn-B5b">
+                                            <connections>
+                                                <action selector="clickSave:" destination="AlD-m5-BcD" id="pzL-to-kc0"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -95,6 +103,10 @@
                         <viewLayoutGuide key="safeArea" id="he2-Rp-lf2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="navi" destination="BcJ-kl-9ar" id="FpT-Ik-Jcp"/>
+                        <outlet property="textView" destination="pwZ-Ml-UiI" id="uSf-Gr-mHk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdO-AM-pVR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="PqG-h4-3Ph" userLabel="Exit" sceneMemberID="exit"/>
